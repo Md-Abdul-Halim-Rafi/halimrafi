@@ -1,3 +1,4 @@
 export * from "./Github";
 export * from "./LinkedIn";
-export * from "./StackOverflow";
+export * from "./WhatsApp";
+export * from "./Medium";

@@ -1,8 +1,15 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { Fira_Code } from "next/font/google";
 import { motion } from "framer-motion";
 
 const MotionLink = motion(Link);
+
+const firaCode = Fira_Code({
+    weight: ["600"],
+    subsets: ["latin"],
+	variable: "--font-fira-code"
+});
 
 const Logo = () => {
     return (
@@ -11,13 +18,13 @@ const Logo = () => {
         >
             <MotionLink
                 href="/"
-                className="w-16 h-16 flex items-center justify-center rounded-full bg-dark text-light text-2xl font-bold"
+                className={`${firaCode.className} h-16 flex items-center justify-center text-xl font-bold`}
                 whileHover={{
                     transition: { duration: 1, repeat: Infinity },
-                    backgroundColor: ["#121212", "rgba(131,58,180,1)", "rgba(253,29,29,1)", "rgba(252,176,69,1)", "rgba(131,58,180,1)", "#121212"],
+                    color: ["#121212", "rgba(131,58,180,1)", "rgba(253,29,29,1)", "rgba(252,176,69,1)", "rgba(131,58,180,1)", "#121212"],
                 }}
             >
-                HL
+                {"<HalimRafi />"}
             </MotionLink>
         </div>
     )

@@ -1,13 +1,25 @@
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 import Logo from "./Logo";
-import { GithubIcon, LinkedInIcon, StackOverflowIcon } from "@/icons/socials";
+import {
+    GithubIcon, LinkedInIcon, MediumIcon, WhatsAppIcon
+} from "@/icons/socials";
+
+import { navbarStrings } from "@/utils/staticData";
+
+const MotionLink = motion(Link);
 
 interface NavLinkProps {
     href: string;
     text: string;
+}
+
+interface NavSocialLinkProps {
+    href: string;
+    icon: React.ReactNode;
 }
 
 const NavLink = (props: NavLinkProps) => {
@@ -15,7 +27,6 @@ const NavLink = (props: NavLinkProps) => {
     const router = useRouter();
 
     const { href, text } = props;
-
 
     return (
         <Link href={href} className="relative group">
@@ -26,6 +37,26 @@ const NavLink = (props: NavLinkProps) => {
                 &nbsp;
             </span>
         </Link>
+    )
+}
+
+const NavSocialLink = (props: NavSocialLinkProps) => {
+
+    const { href, icon } = props;
+
+    return (
+        <MotionLink
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group"
+            whileHover={{
+                translateY: 2,
+                transition: { duration: 0.5 },
+            }}
+        >
+            {icon}
+        </MotionLink>
     )
 }
 
@@ -42,19 +73,26 @@ const Navbar = () => {
             </nav>
 
             <nav className="flex items-center gap-4">
-                <Link href="/">
-                    <GithubIcon />
-                </Link>
-                <Link href="/about">
-                    <LinkedInIcon />
-                </Link>
-                <Link href="/projects">
-                    <StackOverflowIcon />
-                </Link>
+                <NavSocialLink
+                    href={navbarStrings.socials.github}
+                    icon={<GithubIcon />}
+                />
+                <NavSocialLink
+                    href={navbarStrings.socials.whatsapp}
+                    icon={<WhatsAppIcon />}
+                />
+                <NavSocialLink
+                    href={navbarStrings.socials.linkedin}
+                    icon={<LinkedInIcon />}
+                />
+                <NavSocialLink
+                    href={navbarStrings.socials.medium}
+                    icon={<MediumIcon />}
+                />
             </nav>
 
             <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-                {/* <Logo /> */}
+                <Logo />
             </div>
         </header>
     )
