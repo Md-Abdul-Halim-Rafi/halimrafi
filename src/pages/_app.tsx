@@ -6,12 +6,12 @@ import HomeLayout from "@/layout/HomeLayout";
 
 const inter = Inter({
 	subsets: ["latin"],
-	variable: "--font-inter"
+	weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<main className={`${inter.variable} font-inter bg-light w-full min-h-screen`}>
+		<main className="font-inter bg-light w-full min-h-screen">
 			<HomeLayout>
 				<Component {...pageProps} />
 			</HomeLayout>

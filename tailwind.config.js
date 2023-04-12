@@ -8,7 +8,6 @@ module.exports = {
         extend: {
             fontFamily: {
                 inter: [" var(--font-inter)", ...fontFamily.sans],
-                firaCode: [" var(--font-fira-code)", ...fontFamily.sans],
             },
             colors: {
                 dark: "#1b1b1b",

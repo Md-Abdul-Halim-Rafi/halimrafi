@@ -54,6 +54,7 @@ const NavSocialLink = (props: NavSocialLinkProps) => {
                 translateY: 2,
                 transition: { duration: 0.5 },
             }}
+            whileTap={{ scale: 0.9 }}
         >
             {icon}
         </MotionLink>
