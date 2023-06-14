@@ -19,6 +19,7 @@ interface NavLinkProps {
 
 interface NavSocialLinkProps {
     href: string;
+    ariaLabel: string;
     icon: React.ReactNode;
 }
 
@@ -42,12 +43,13 @@ const NavLink = (props: NavLinkProps) => {
 
 const NavSocialLink = (props: NavSocialLinkProps) => {
 
-    const { href, icon } = props;
+    const { href, icon, ariaLabel } = props;
 
     return (
         <MotionLink
             href={href}
             target="_blank"
+            aria-label={ariaLabel}
             rel="noopener noreferrer"
             className="relative group"
             whileHover={{
@@ -77,18 +79,22 @@ const Navbar = () => {
                 <NavSocialLink
                     href={navbarStrings.socials.github}
                     icon={<GithubIcon />}
+                    ariaLabel="Github Profile - Md-Abdul-Halim-Rafi"
                 />
                 <NavSocialLink
                     href={navbarStrings.socials.whatsapp}
                     icon={<WhatsAppIcon />}
+                    ariaLabel="WhatsApp Account - Md-Abdul-Halim-Rafi"
                 />
                 <NavSocialLink
                     href={navbarStrings.socials.linkedin}
                     icon={<LinkedInIcon />}
+                    ariaLabel="LinkedIn Profile - md-abdul-halim-rafi"
                 />
                 <NavSocialLink
                     href={navbarStrings.socials.medium}
                     icon={<MediumIcon />}
+                    ariaLabel="Medium Profile - @mdabdulhalimrafi"
                 />
             </nav>
 
