@@ -31,7 +31,23 @@ const Experience = () => {
                         position="Senior Software Engineer"
                         address="Singapore"
                         companyLink="https://www.hypescout.co"
-                        time="Mar 2021 - Present"
+                        time="Jul 2021 - Present"
+                        work="Working on a social media marketing platform for the gaming industry."
+                    />
+                    <Details
+                        company="HypeScout Pte. Ltd."
+                        position="Software Engineer"
+                        address="Singapore"
+                        companyLink="https://www.hypescout.co"
+                        time="Jan 2022 - Jun 2022"
+                        work="Working on a social media marketing platform for the gaming industry."
+                    />
+                    <Details
+                        company="HypeScout Pte. Ltd."
+                        position="Junior Frontend Engineer"
+                        address="Singapore"
+                        companyLink="https://www.hypescout.co"
+                        time="Mar 2021 - Dec 2021"
                         work="Working on a social media marketing platform for the gaming industry."
                     />
                     <Details
