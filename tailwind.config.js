@@ -10,11 +10,16 @@ module.exports = {
                 inter: [" var(--font-inter)", ...fontFamily.sans],
             },
             colors: {
-                dark: "#1b1b1b",
-                light: "#f5f5f5",
-                primary: "#B63E96", // 240,86,199
-                primaryDark: "#58E6D9", // 80,230,217
+                dark: "#095354",
+                light: "#F5F5F5",
+                primary: "#095354",
+                primaryDark: "#58E6D9",
             },
+        },
+        textColor: {
+            dark: "#095354",
+            light: "#ffed4a",
+            danger: "#e3342f",
         },
     },
     plugins: [],
