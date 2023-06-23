@@ -30,7 +30,7 @@ const NavLink = (props: NavLinkProps) => {
     const { href, text } = props;
 
     return (
-        <Link href={href} className="relative group">
+        <Link href={href} className="relative group text-dark">
             {text}
             <span
                 className={`h-[1px] inline-block bg-dark transition-[width] duration-300 ease-in-out group-hover:w-full absolute left-0 -bottom-0.5 ${router.asPath === href ? "w-full" : "w-0"}`}
@@ -66,11 +66,10 @@ const NavSocialLink = (props: NavSocialLinkProps) => {
 const Navbar = () => {
     return (
         <header
-            className="w-full px-32 py-8 font-medium flex items-center justify-between"
+            className="w-full bg-white px-32 py-8 font-medium flex items-center justify-between"
         >
             <nav className="gap-10 flex">
                 <NavLink href="/" text="Home" />
-                <NavLink href="/about" text="About" />
                 <NavLink href="/projects" text="Projects" />
                 <NavLink href="/articles" text="Articles" />
             </nav>
@@ -78,29 +77,29 @@ const Navbar = () => {
             <nav className="flex items-center gap-4">
                 <NavSocialLink
                     href={navbarStrings.socials.github}
-                    icon={<GithubIcon />}
+                    icon={<GithubIcon fill="#075454" />}
                     ariaLabel="Github Profile - Md-Abdul-Halim-Rafi"
                 />
                 <NavSocialLink
                     href={navbarStrings.socials.whatsapp}
-                    icon={<WhatsAppIcon />}
+                    icon={<WhatsAppIcon fill="#075454" />}
                     ariaLabel="WhatsApp Account - Md-Abdul-Halim-Rafi"
                 />
                 <NavSocialLink
                     href={navbarStrings.socials.linkedin}
-                    icon={<LinkedInIcon />}
+                    icon={<LinkedInIcon fill="#075454" />}
                     ariaLabel="LinkedIn Profile - md-abdul-halim-rafi"
                 />
                 <NavSocialLink
                     href={navbarStrings.socials.medium}
-                    icon={<MediumIcon />}
+                    icon={<MediumIcon fill="#075454" />}
                     ariaLabel="Medium Profile - @mdabdulhalimrafi"
                 />
             </nav>
 
-            <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+            {/* <div className="absolute left-[50%] top-2 translate-x-[-50%]">
                 <Logo />
-            </div>
+            </div> */}
         </header>
     )
 }

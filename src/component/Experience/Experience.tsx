@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 
 import Details from "./Details";
+import Image from "next/image";
 
 const Experience = () => {
 
@@ -12,8 +13,8 @@ const Experience = () => {
     });
 
     return (
-        <div className="my-32">
-            <h2 className="font-bold text-8xl mb-32 w-full text-center">
+        <div className="my-32 relative">
+            <h2 className="font-bold text-8xl mb-32 w-full text-center text-dark">
                 Experience
             </h2>
 
@@ -28,7 +29,7 @@ const Experience = () => {
                 <ul className="w-full flex flex-col items-start justify-between ml-4">
                     <Details
                         company="HypeScout Pte. Ltd."
-                        position="Senior Software Engineer"
+                        position="Software Engineer III"
                         address="Singapore"
                         companyLink="https://www.hypescout.co"
                         time="Jul 2021 - Present"
@@ -36,7 +37,7 @@ const Experience = () => {
                     />
                     <Details
                         company="HypeScout Pte. Ltd."
-                        position="Software Engineer"
+                        position="Software Engineer II"
                         address="Singapore"
                         companyLink="https://www.hypescout.co"
                         time="Jan 2022 - Jun 2022"

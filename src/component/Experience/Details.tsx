@@ -24,7 +24,7 @@ const Details = (props: DetailsProps) => {
                 whileInView={{ y: 0 }}
                 transition={{ duration: 0.5, type: "spring" }}
             >
-                <h3 className="capitalize font-bold text-2xl">
+                <h3 className="capitalize font-bold text-2xl text-dark">
                     {props.position} &nbsp;
                     <a
                         href={props.companyLink}
@@ -35,10 +35,10 @@ const Details = (props: DetailsProps) => {
                         @{props.company}
                     </a>
                 </h3>
-                <span className="capitalize font-medium text-dark/75">
+                <span className="capitalize font-medium text-dark/80">
                     {props.time} &nbsp; | &nbsp; {props.address}
                 </span>
-                <p className="font-medium">{props.work}</p>
+                <p className="font-medium text-dark">{props.work}</p>
             </motion.div>
         </li>
     )
