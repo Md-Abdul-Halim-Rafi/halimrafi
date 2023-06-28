@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 
-import Details from "./Details";
-import Image from "next/image";
+import Details from "./components/Details";
 
 const Experience = () => {
 

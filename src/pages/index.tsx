@@ -1,7 +1,9 @@
-import AnimatedText from "@/component/AnimatedText";
-import Experience from "@/component/Experience/Experience";
-import SEO from "@/component/SEO";
 import Image from "next/image";
+
+import SEO from "@/component/SEO";
+import AnimatedText from "@/component/AnimatedText";
+import Experience from "@/features/experience/Experience";
+import Education from "@/features/education/Education";
 
 export default function Home() {
 	return (
@@ -33,6 +35,8 @@ export default function Home() {
 			</h2>
 
 			<Experience />
+
+			<Education />
 		</main>
 	)
 }
